@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            margin: 0;
+
+            background-color: #f0f0f0; /* Adding a background color for better visibility */
+
+            font-family: 'Copperplate', sans-serif; /* Adding Copperplate as the font */
+
+        }
+
+ 
+
+        .ancestors {
+
+            width: 500px;
+
+            background-image: url('https://images.ctfassets.net/swt2dsco9mfe/2Ps2HmzTiotrjEilWWHZLP/ec2bc2f7a66a293fcf76c5deb77384b1/1280x960-terrain-wa.jpg?w=411&h=231&fit=thumb&q=70');
+
+            background-size: cover;
+
+            background-position: center;
+
+            border: 2px double green;
+
+            color: blue;
+
+            padding: 15px; /* Increased padding for better spacing */
+
+            margin: 15px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adding a subtle box shadow for depth */
+
+        }
+
+ 
+
+        .ancestors * {
+
+            border: 2px double green;
+
+            color: blue;
+
+            padding: 10px; /* Adjusted padding for better spacing */
+
+            margin: 10px;
+
+        }
+
+ 
+
+        li {
+
+            background-image: url('https://i.redd.it/rqk94mgeazu51.png');
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("span").parentsUntil("div").css({"color": "black"});
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="ancestors">
+
+        div (great-grandparent)
+
+        <ul>ul (grandparent) 
+
+            <li>li (direct parent) <span>span<
+
+/span></li>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
